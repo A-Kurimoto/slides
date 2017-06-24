@@ -18,6 +18,7 @@ https://www.facebook.com/kurimoto.atsuo
 ### ランニング関係のサービス？
 
 * マラソン大会にエントリーした人たちが当日までの練習を競い合うアプリ
+
 https://runnet.jp/smpapp/tatta/
 
 （これはサーバレスじゃないです。ただのCM）
@@ -27,9 +28,11 @@ https://runnet.jp/smpapp/tatta/
 ### サーバレスなランニング関係のサービス
 
 * マラソン大会に参加してる家族や友人を応援するアプリ
+
 https://runnet.jp/smpapp/ouennavi/
 
 * マラソン大会でカメラマンが撮影した写真を、ゴールしたらすぐ完走証にして印刷するサービス
+
 https://runphoto-plus.runnet.jp/
 
 ---
@@ -66,8 +69,14 @@ https://runphoto-plus.runnet.jp/
 
 ---
 
-###
+### 今日のトピックス
+
+* モバイルでなくともCognito
+* API Gatewayの必要性
+* Lambdaでデプロイ制限に引っかかった話
 
 
+
+---
 
 ### Thank you!
