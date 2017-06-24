@@ -74,7 +74,8 @@ https://runphoto-plus.runnet.jp/
 * モバイルでなくともCognito
 * API Gatewayの必要性
 * Lambdaでデプロイ制限に引っかかった話
-
+* 負荷テストやっとく？
+* 非同期イベント
 
 
 ---
