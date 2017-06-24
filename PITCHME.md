@@ -50,8 +50,24 @@ https://runphoto-plus.runnet.jp/
 
 ---
 
-# Lambda + DynamoDB + API Gateway最強
+# そうだ、サーバレスにしよう！
 
 ---
+
+### 主に利用しているAWSサービス
+
+* Cognito
+* API Gateway
+* Lambda
+* DyanmoDB
+* S3
+* CloudFront
+* CloudWatch
+
+---
+
+###
+
+
 
 ### Thank you!
