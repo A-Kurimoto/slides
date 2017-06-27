@@ -37,6 +37,8 @@ https://runnet.jp/smpapp/ouennavi/
 
 https://runphoto-plus.runnet.jp/
 
++++
+
 * 応援や写真など、大会に関する情報をLINE botで通知するサービス
 
 https://fujisan-marathon.jp/line/
