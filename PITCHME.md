@@ -92,7 +92,7 @@ https://fujisan-marathon.jp/line/
 
 +++
 
-```swagger-sample.yaml
+```yaml:sample.yaml
   /v1/some-resources:
     get:
       parameters:
@@ -111,6 +111,8 @@ https://fujisan-marathon.jp/line/
       security:
       - api_key: []
 ```
+
++++
 
 
 ### Lambda
