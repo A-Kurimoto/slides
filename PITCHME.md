@@ -19,9 +19,9 @@ https://www.facebook.com/kurimoto.atsuo
 
 ### ランニング関係のサービス？
 
-* マラソン大会にエントリーした人たちが当日までの練習を競い合うアプリ
+* (TATTA)[https://runnet.jp/smpapp/tatta/]
 
-https://runnet.jp/smpapp/tatta/
+マラソン大会にエントリーした人たちが当日までの練習を競い合うアプリ
 
 （これはサーバレスじゃないです。ただのCM）
 
@@ -29,19 +29,17 @@ https://runnet.jp/smpapp/tatta/
 
 ### サーバレスなランニング関係のサービス
 
-* マラソン大会に参加してる家族や友人を応援するアプリ
+* (応援navi)[https://runnet.jp/smpapp/ouennavi/]
 
-https://runnet.jp/smpapp/ouennavi/
+マラソン大会に参加してる家族や友人を応援するアプリ
 
-* マラソン大会でカメラマンが撮影した写真を、ゴールしたらすぐ完走証にして印刷するサービス
+* (ランフォト＋)[https://runphoto-plus.runnet.jp/]
 
-https://runphoto-plus.runnet.jp/
+マラソン大会でカメラマンが撮影した写真を、ゴールしたらすぐ完走証にして印刷するサービス
 
-+++
+* (富士山マラソンLINE bot)[https://fujisan-marathon.jp/line/]
 
-* 応援や写真など、大会に関する情報をLINE botで通知するサービス
-
-https://fujisan-marathon.jp/line/
+応援や写真など、大会に関する情報をLINE botで通知するサービス。いろんな大会に採用可能。
 
 ---
 
