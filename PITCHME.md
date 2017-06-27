@@ -21,7 +21,7 @@ https://www.facebook.com/kurimoto.atsuo
 
 * マラソン大会にエントリーした人たちが当日までの練習を競い合うアプリ
 
-(TATTA)[https://runnet.jp/smpapp/tatta/]
+https://runnet.jp/smpapp/tatta/
 
 （これはサーバレスじゃないです。ただのCM）
 
@@ -31,15 +31,17 @@ https://www.facebook.com/kurimoto.atsuo
 
 * マラソン大会に参加してる家族や友人を応援するアプリ
 
-(応援navi)[https://runnet.jp/smpapp/ouennavi/]
+https://runnet.jp/smpapp/ouennavi/
 
 * マラソン大会でカメラマンが撮影した写真を、ゴールしたらすぐ完走証にして印刷するサービス
 
-(ランフォト＋)[https://runphoto-plus.runnet.jp/]
+https://runphoto-plus.runnet.jp/
 
-* 応援や写真など、大会に関する情報をLINE botで通知するサービス。いろんな大会に採用可能。
++++
 
-(富士山マラソンLINE bot)[https://fujisan-marathon.jp/line/]
+* 応援や写真など、大会に関する情報をLINE botで通知するサービス
+
+https://fujisan-marathon.jp/line/
 
 ---
 
@@ -69,7 +71,7 @@ https://www.facebook.com/kurimoto.atsuo
 
 ### 今日のトピックス
 
-* DynamoDBのテーブル設計について
+* API Gateway + Lambda + DynamoDB基本セット
 * プロビジョニングと負荷試験
 * 更なる低コスト化を求めて
 * 非同期イベントを使いこなそう
@@ -77,6 +79,47 @@ https://www.facebook.com/kurimoto.atsuo
 * コードの共通化
 
 ---
+
+## API Gateway + Lambda + DynamoDB基本セット
+
++++
+
+### API Gateway
+
+* APIとして容易に外部公開できる
+* Swaggerを使って　As a codeで仕様書が書ける
+* 意外と高い
+
++++
+
+```swagger-sample.yaml
+  /v1/some-resources:
+    get:
+      parameters:
+        - name: "param1"
+          in: "query"
+          required: true
+          type: "string"
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: '#/definitions/SomeResponse'
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+      security:
+      - api_key: []
+```
+
+
+### Lambda
+
++++
+
+### DynamoDB
+
++++
 
 ### Tips
 * ステートフルなLambda（ぇ
