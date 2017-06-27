@@ -1,5 +1,5 @@
 
-## スパイクするタイプのサービスを作ってみた話
+## スパイクするタイプのサービスを作って勉強になったこと
 
 2017/7/21
 
@@ -86,10 +86,12 @@ https://fujisan-marathon.jp/line/
 
 ## API Gateway
 
++++
+
 ### 気に入ってるとこ
 
 * APIとして容易に外部公開できる
-* API別にリミット制限かけれる
+* API別に使用量制限かけれる
 * APIキー便利
 * Swaggerを使って　As a codeで仕様書が書ける
 
@@ -108,9 +110,6 @@ https://fujisan-marathon.jp/line/
           description: "200 response"
           schema:
             $ref: '#/definitions/SomeResponse'
-          headers:
-            Access-Control-Allow-Origin:
-              type: "string"
       security:
       - api_key: []
 ```
@@ -120,18 +119,47 @@ https://fujisan-marathon.jp/line/
 ### 気になってるとこ
 
 * Lambda側にも実装が影響する（プロキシ統合の使用時に顕著）
-* たまに「あれ？直接Lambda呼び出しした方が　TCO低かった？って思う
-* 意外と高い
-
-### Lambda
+* たまに「あれ？直接Lambda呼び出しした方が　TCO低かった？」って思う
+* 意外と高い(弊社環境ではLambdaより少しお高め)
 
 +++
 
-### DynamoDB
+## Lambda
 
 +++
 
-### Tips
+### 気に入ってるとこ
+
+* 全部
+
++++
+
+### もっとこうなったらいいのに
+
+* デプロイメント制限も緩和申請したい
+* 稼働インスタンスを自分で制御したい
+* ていうか自作Dockerで動いて欲しい
+
++++
+
+## DynamoDB
+
++++
+
+### 気に入ってるとこ
+
++++
+
+### 気になってるとこ
+
++++
+
+---
+
+# Tips
+
++++
+
 * ステートフルなLambda（ぇ
 * Lambdaでデプロイ制限に引っかかった場合
 
