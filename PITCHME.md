@@ -84,11 +84,14 @@ https://fujisan-marathon.jp/line/
 
 +++
 
-### API Gateway
+## API Gateway
+
+### 気に入ってるとこ
 
 * APIとして容易に外部公開できる
+* API別にリミット制限かけれる
+* APIキー便利
 * Swaggerを使って　As a codeで仕様書が書ける
-* 意外と高い
 
 +++
 
@@ -114,6 +117,11 @@ https://fujisan-marathon.jp/line/
 
 +++
 
+### 気になってるとこ
+
+* Lambda側にも実装が影響する（プロキシ統合の使用時に顕著）
+* たまに「あれ？直接Lambda呼び出しした方が　TCO低かった？って思う
+* 意外と高い
 
 ### Lambda
 
