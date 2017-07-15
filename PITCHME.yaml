@@ -1,6 +1,8 @@
 #テーマの設定
 theme : sky
 
+vertical-center : false
+
 #ロゴアイコンの設定
 # logo : logo.png
 
