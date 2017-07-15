@@ -19,12 +19,12 @@ https://www.facebook.com/kurimoto.atsuo
 
 ### ランニング関係のサービス？
 
-<dl>
-  <dt>[TATTA]([https://runnet.jp/smpapp/tatta/)</dt>
-  <dd>マラソン大会にエントリーした人たちが当日までの練習を競い合うアプリ</dd>
-</dl>
+#### [TATTA]([https://runnet.jp/smpapp/tatta/)
+
+- マラソン大会にエントリーした人たちが当日までの練習を競い合うアプリ
 
 ※これはサーバレスじゃないただのCM
+
 
 ---
 
