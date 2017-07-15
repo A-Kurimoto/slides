@@ -5,7 +5,7 @@ theme : sky
 # logo : logo.png
 
 #フットノートの設定
-# footnote : "© 2017 A."
+footnote : "© 2017 A.Kurimiti"
 
 #スライドのページ数表示の設定
 slide-number: true
@@ -13,18 +13,14 @@ slide-number: true
 #コードのシンタックスハイライトの設定
 highlight : monokai
 
-
 #スライド自動再生の設定
 # autoslide : 5000
-
 
 #スライドのループ設定
 # loop : true
 
-
 #トランジションの設定
 # transition : fade
-
 
 #チャート / グラフ機能の設定
 charts : true
