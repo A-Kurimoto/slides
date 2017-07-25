@@ -3,10 +3,16 @@
 ### [栗本 篤臣](https://www.wantedly.com/projects/26782/staffings/106526)
 
 * 基本エンジニアです。
-* 山中を徹夜で二晩くらい走り続ける競技が大好きです。
 * ランニング関係のサービス創るお仕事してます。
+* 山中を徹夜で二晩くらい走り続けるスポーツ（トレイルラン）が大好きです。
 
 <img width="200" alt="スクリーンショット 2017-07-17 7.13.12.png" src="https://qiita-image-store.s3.amazonaws.com/0/80905/dc2a622a-51b9-0755-8e71-212310b6fdc2.png">
+
+---
+
+![image.png](https://qiita-image-store.s3.amazonaws.com/0/80905/56e69e44-241b-fab5-f318-b1ff9e8ec574.png)
+
+~~「アホじゃねーの？」と~~思わず興味をそそられた方は[こちら](https://www.slideshare.net/socialmediapartnersjp/20140607-35921812)とか[こちら](https://www.facebook.com/notes/kurimoto-atsuo/2014%E5%B9%B44%E6%9C%8825-27%E6%97%A5-utmf%E5%AE%8C%E8%B5%B0%E8%A8%98/510312625739879/)へ
 
 ---
 
@@ -43,6 +49,8 @@
 
 <img width="661" alt="スクリーンショット 2017-07-17 7.12.20.png" src="https://qiita-image-store.s3.amazonaws.com/0/80905/0f411242-c2ab-3116-739c-985c9785e4e2.png">
 
+富士山マラソンエントリー受付中！（CM）
+
 ---
 
 ## [応援navi](https://runnet.jp/smpapp/ouennavi/)
@@ -64,7 +72,11 @@
 
 ---
 
-# 応援navi導入大会（2016年実績）
+# 応援naviもうちょい
+
+* Web版とiOS、Android
+* アプリは3~4人で開発してリリースまで半年、リリース後1年で15万DL
+* 主にフルマラソンで導入（2016年実績）
 
 勝田全国マラソン
 いわきサンシャインマラソン
@@ -102,8 +114,7 @@ http://runners.co.jp/results/
 * 大会ある日はドカンとアクセス、大会無い日はほとんど無風、、
 * 大会毎にアクセス数が全く異なる
 <img width="1238" alt="スクリーンショット 2017-07-20 7.53.44.png" src="https://qiita-image-store.s3.amazonaws.com/0/80905/a87d394b-b9e7-25b7-dd8b-115a4dcb06d4.png">
-
-* 大会ある日は休日なので、トラブル発生すると当日中の復旧が難しい、けどSLAのレベルは非常に高い
+* 大会ある日は休日なので、トラブル発生すると当日中の復旧が難しい。けどSLAのレベルは非常に高い
 
 ---
 
@@ -127,7 +138,7 @@ http://runners.co.jp/results/
 
 ##  既存環境からの切り替え
 
-* 元々の構成はEC2 + CloudSearch + DynamoDBのWebアプリ
+* 元々はEC2 + CloudSearch + DynamoDBのWebサービス
 * Jenkins + GitHub Flow + apexでデプロイ自動化
 * 本番は東京、開発はバージニアで同一の環境を製作
 * API GatewayとLambdaで処理をAPI化。静的ファイルはS3へ
@@ -137,12 +148,19 @@ http://runners.co.jp/results/
 
 ## 安定運用までの道程
 
-* CloudWatchでアラート設定
 * DynamoDBにAutoScale設定（昔はDynamicDynamoDB）
 * リクエストの実データから各リソースにかかる負荷の最大瞬間風速を予測
-* スパイクに備えてマラソン大会の知名度や前年度実績に合わせてCloudWatchのルールで各種リソースを増強するツール作成
+* スパイクに備え、大会規模に応じて各種リソースを増強するツール作成（CloudWatchルール + Lambda）
 * 念のため[Goad](https://github.com/goadapp/goad)で負荷試験（Goad自体はforkしてカスタマイズ）
-* Lambda制限緩和申請
+* Lambda制限緩和申請（2017/5にデフォルト1000になりました）
+
+---
+
+## 結果
+
+* 安定稼働＾＾
+
+![image.png](https://qiita-image-store.s3.amazonaws.com/0/80905/b4a93855-d06f-a578-20e7-5071015fd3de.png)
 
 ---
 
@@ -158,7 +176,7 @@ http://runners.co.jp/results/
 ## 更なる低コスト化を求めて
 
 * EC2で動作していた管理コンソールもS3+API Gateway+Lambdaに
-* CloudSearchが要件のシンプルさに比べて重厚なので、無理やりDynamoDB化（ただしデータ件数は増える）
+* CloudSearchが要件のシンプルさに比べて[意外と運用が大変](http://qiita.com/kurimoto/items/3a869ad8dd7fab1bd3a6)なので、無理やりDynamoDB化（ただしデータ件数は増える）
 
 | partition key | sort key |
 |:-----------|:------------|
@@ -179,7 +197,7 @@ http://runners.co.jp/results/
 
 ## モノリシックでは起きなかった課題
 
-* 複数のリポジトリが共通のリソースを利用している状況でどのように構成を可視化すべきか
+* 複数のリポジトリが共通のリソースを利用している状況でどのように構成を可視化すべきか（つ　CloudFormation）
 * 複数のリポジトリで同じようなコードを書かざるを得ないことへの対処
 * 「要件とデータ量によって採用するサービス、構成を設計する」というスキルセットが重要に
 
@@ -271,6 +289,8 @@ http://runners.co.jp/results/
 * たまに「あれ？直接Lambda呼び出した方がTCO低かった？」って思う（2-Tier Architecture vs 3-Tier Architecture）
 * 意外と高い(弊社環境ではLambdaより少しお高め)
 
+![image.png](https://qiita-image-store.s3.amazonaws.com/0/80905/14a8d0ec-da84-1919-3e98-a66d8b657e9c.png)
+
 ---
 
 ## Lambda
@@ -297,7 +317,7 @@ http://runners.co.jp/results/
 ## AWS Batch
 
 * Lambda上では動かない処理（インスタンス由来、デプロイメント制限由来等）や、タイムアウトしてしまう処理にはこれ
-* キューされたリクエストを自作のDocker　imageで動かせる
+* キューされたリクエストを自作のDocker imageで動かせる
 * バックエンドでEC2をマネージドで利用
 
 ---
@@ -349,4 +369,12 @@ http://runners.co.jp/results/
 
 ---
 
-# Thank you!
+# Thank you! 
+
+---
+
+![image.png](https://qiita-image-store.s3.amazonaws.com/0/80905/53286587-0c16-b19e-e36d-7c8d48ab8743.png)
+
+---
+
+# https://www.wantedly.com/projects/26782
